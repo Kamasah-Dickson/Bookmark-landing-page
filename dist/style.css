@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
 
 html {
@@ -12,4 +13,24 @@ html {
 
 body {
   min-height: 100vh;
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

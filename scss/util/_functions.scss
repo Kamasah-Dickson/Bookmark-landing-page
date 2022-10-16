@@ -1,0 +1,7 @@
+@function rem($pixel) {
+	@if math.is-unitless($pixel) {
+		@return math.div($pixel, 16) + rem;
+	} @else {
+		@error 'Dont use units when using rem';
+	}
+}
