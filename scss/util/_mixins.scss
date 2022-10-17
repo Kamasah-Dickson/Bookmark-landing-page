@@ -11,7 +11,6 @@
 	background-color: g.$Soft-Blue;
 	color: g.$white;
 	border: none;
-
 	padding-block: u.em(15);
 	padding-inline:clamp(u.em(7),2vw,u.em(15));
 	font-size: clamp(u.rem(15), 3vw, u.rem(20));
@@ -20,7 +19,7 @@
 	box-shadow: 0 u.rem(3) u.rem(5) u.rem(-1) g.$Soft-Blue2;
 	outline: 1px solid g.$Soft-Blue;
 	font-weight: 400;
-	margin-right: u.em(5);
+	margin-right: u.em(10);
 }
 
 @mixin normal {
@@ -35,5 +34,20 @@
 	box-shadow: 0 u.rem(3) u.rem(5) u.rem(-1) g.$Soft-Blue2;
 	outline: 1px solid g.$white;
 	font-weight: 400;
+	margin-left: u.em(10);
+}
+
+@mixin cta {
+	background-color: g.$Soft-Red;
+	color: g.$white;
+	border: none;
+	padding: u.em(15) u.em(40);
+	font-size:rem(6);
+	border-radius: u.em(4);
+	cursor: pointer;
+	box-shadow: 0 u.rem(3) u.rem(5) u.rem(-1) g.$Soft-Red;
+	outline: 1px solid g.$Soft-Red;
+	font-weight: 400;
 	margin-left: u.em(5);
+	text-transform: uppercase;
 }

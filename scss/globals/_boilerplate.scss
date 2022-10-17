@@ -47,6 +47,6 @@ ul {
 }
 
 .container {
-	width: min(100% - u.rem(30), u.rem(1100));
+	width: min(100% - 10% + 1vw, u.rem(1220));
 	margin-inline: auto;
 }

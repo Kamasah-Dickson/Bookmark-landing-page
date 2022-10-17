@@ -4,19 +4,21 @@ main {
 	position: relative;
 	.hero-section {
 		overflow-x: hidden;
-		padding-top: u.rem(95);
+		margin-top: clamp(u.rem(95), 20vw, u.em(160));
 		.container {
 			display: grid;
 			grid-template-columns: 1fr;
+			align-items: center;
 			gap: u.em(50);
-		
+			caret-color: transparent;
+			
 			.left-container {
 				order: 2;
 				.hero-buttons {
 					margin-top: u.em(30);
 					margin-bottom: u.em(20);
 					@include u.flex;
-					justify-content: space-evenly;
+					justify-content: center;
 					.focused {
 						@include u.focused;
 					}
@@ -34,13 +36,13 @@ main {
 					bottom: 0;
 					right: u.rem(-90);
 					width: 100%;
-					height: clamp(u.rem(160), 50vw, u.rem(300));
+					height: clamp(u.rem(160), 50vw, u.rem(370));
 					background-color: g.$Soft-Blue;
 					border-bottom-left-radius: u.rem(80);
 				}
 			}
 			@include u.breakpoints(medium) {
-				grid-template-columns: 1fr 1fr;
+				grid-template-columns: u.rem(450) u.rem(670);
 				.left-container {
 					order: 1;
 					h1,
@@ -53,6 +55,9 @@ main {
 				}
 				.right-container {
 					order: 2;
+					&::before {
+						right: u.rem(-180);
+					}
 				}
 			}
 		}

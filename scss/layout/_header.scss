@@ -17,7 +17,37 @@ header {
 			@include u.breakpoints(medium) {
 				@include u.flex;
 				justify-content: center;
-				gap: u.em(20);
+				gap: u.em(40);
+			}
+			a,
+			a:visited,
+			a:active {
+				text-decoration: none;
+				.btn {
+					@include u.cta;
+					box-shadow: none;
+					border: none;
+					display: block;
+
+					&:hover {
+						color: g.$Soft-Red;
+						background-color: transparent;
+						transition: background-color 45ms ease-in;
+					
+					}
+				}
+			}
+			li {
+				a {
+					font-size: u.rem(16);
+					text-transform: uppercase;
+					color: g.$Very-Dark-Blue;
+					transition: 0.3s ease;
+					cursor: pointer;
+					&:hover {
+						color: g.$Soft-Red;
+					}
+				}
 			}
 		}
 		#hamburger {
