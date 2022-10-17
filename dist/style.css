@@ -10,12 +10,14 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
   font-size: 18px;
+  position: relative;
+}
+body .overflow-hidden {
   position: relative;
   overflow-x: hidden;
 }
