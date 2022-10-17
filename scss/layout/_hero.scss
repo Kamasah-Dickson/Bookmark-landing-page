@@ -1,0 +1,43 @@
+@use '../util' as u;
+@use '../globals' as g;
+main {
+	position: relative;
+	.hero-section {
+		overflow-x: hidden;
+		padding-top: u.rem(95);
+		.container {
+			display: grid;
+			grid-template-columns: 1fr;
+            gap: u.em(50);
+			.left-container {
+				order: 2;
+                .hero-buttons{
+                    margin-top:u.em(30);
+                    @include u.flex;
+                    justify-content: space-evenly;
+                    .focused{
+                        @include u.focused;
+                    }
+                    .normal{
+                        @include u.normal;
+                    }
+                }
+               
+			}
+			.right-container {
+				position: relative;
+				&::before {
+					content: '';
+					z-index: -1;
+					position: absolute;
+					bottom: 0;
+					right: u.rem(-90);
+					width: 100%;
+					height:clamp(u.rem(160), 50vw, u.rem(300));
+					background-color: g.$Soft-Blue;
+					border-bottom-left-radius: u.rem(80);
+				}
+			}
+		}
+	}
+}

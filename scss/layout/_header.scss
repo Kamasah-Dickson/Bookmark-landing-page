@@ -6,6 +6,9 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
+	background: hsla(0, 0%, 109%, 0.1);
+	backdrop-filter: blur(u.rem(5));
+	z-index: 999;
 	.container {
 		@include u.flex;
 		height: u.rem(80);
@@ -16,6 +19,9 @@ header {
 			img {
 				width: u.rem(20);
 				height: u.rem(20);
+			}
+			@include u.breakpoints(medium) {
+				display: none;
 			}
 		}
 		&.container {
@@ -135,6 +141,9 @@ header {
 					margin: 0 u.em(20);
 					cursor: pointer;
 				}
+			}
+			@include u.breakpoints(medium) {
+				display: none;
 			}
 		}
 		.mobile__navigation.show-nav {
