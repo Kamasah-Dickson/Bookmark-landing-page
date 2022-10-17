@@ -2,7 +2,8 @@
 @use '../globals' as g;
 
 header {
-	position: fixed;
+	// position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -14,6 +15,11 @@ header {
 		height: u.rem(80);
 		.links {
 			display: none;
+			@include u.breakpoints(medium) {
+				@include u.flex;
+				justify-content: center;
+				gap: u.em(20);
+			}
 		}
 		#hamburger {
 			img {
@@ -39,9 +45,9 @@ header {
 			height: 100vh;
 			position: absolute;
 			inset: 0;
-			z-index: 99;
 			transform: translateX(100%);
 			transition: transform 0.3s ease-in;
+			z-index: 99;
 			&__container {
 				width: min(100% - u.rem(50), u.rem(1200));
 				height: 100%;
@@ -117,16 +123,16 @@ header {
 							}
 						}
 					}
-					.me {
-						width: u.rem(60);
-						height: u.rem(60);
-						margin: u.rem(50) auto 0 auto;
-						border-radius: 100%;
-						transition: 100ms ease-in;
-						&:hover {
-							border: 2px solid g.$white;
-							cursor: pointer;
-						}
+				}
+				.me {
+					width: u.rem(60);
+					height: u.rem(60);
+					margin: u.em(50) auto u.em(20) auto;
+					border-radius: 100%;
+					transition: 100ms ease-in;
+					&:hover {
+						border: 2px solid g.$white;
+						cursor: pointer;
 					}
 				}
 			}

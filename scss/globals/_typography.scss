@@ -2,6 +2,10 @@
 @use '../globals/colors' as g;
 p {
 	font-weight: 400;
+	text-align: center;
+	color: g.$Grayish-Blue;
+	line-height: 1.3;
+	font-size: u.rem(17);
 }
 
 h1,
@@ -14,14 +18,8 @@ span {
 	text-align: center;
 }
 
-h1 {
+h1,h2 {
 	font-size: clamp(u.rem(30), 4vw, u.rem(55));
 	margin-bottom: u.em(10);
 }
 
-p {
-	text-align: center;
-	color: g.$Grayish-Blue;
-	line-height: 1.3;
-	font-size: u.rem(18);
-}

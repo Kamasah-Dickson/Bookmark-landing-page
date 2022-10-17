@@ -8,21 +8,22 @@ main {
 		.container {
 			display: grid;
 			grid-template-columns: 1fr;
-            gap: u.em(50);
+			gap: u.em(50);
+		
 			.left-container {
 				order: 2;
-                .hero-buttons{
-                    margin-top:u.em(30);
-                    @include u.flex;
-                    justify-content: space-evenly;
-                    .focused{
-                        @include u.focused;
-                    }
-                    .normal{
-                        @include u.normal;
-                    }
-                }
-               
+				.hero-buttons {
+					margin-top: u.em(30);
+					margin-bottom: u.em(20);
+					@include u.flex;
+					justify-content: space-evenly;
+					.focused {
+						@include u.focused;
+					}
+					.normal {
+						@include u.normal;
+					}
+				}
 			}
 			.right-container {
 				position: relative;
@@ -33,9 +34,25 @@ main {
 					bottom: 0;
 					right: u.rem(-90);
 					width: 100%;
-					height:clamp(u.rem(160), 50vw, u.rem(300));
+					height: clamp(u.rem(160), 50vw, u.rem(300));
 					background-color: g.$Soft-Blue;
 					border-bottom-left-radius: u.rem(80);
+				}
+			}
+			@include u.breakpoints(medium) {
+				grid-template-columns: 1fr 1fr;
+				.left-container {
+					order: 1;
+					h1,
+					p {
+						text-align: left;
+					}
+					.hero-buttons {
+						justify-content: start;
+					}
+				}
+				.right-container {
+					order: 2;
 				}
 			}
 		}
