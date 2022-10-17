@@ -21,6 +21,11 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 ul li {
@@ -75,19 +80,17 @@ header .container.container .bookmark-logo {
 header .container.container .bookmark-logo img {
   width: 100%;
 }
-
-.mobile__navigation {
+header .container .mobile__navigation {
   background-color: hsla(229deg, 31%, 21%, 0.978);
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 99;
   transform: translateX(100%);
   transition: transform 0.3s ease-in;
 }
-.mobile__navigation__container {
+header .container .mobile__navigation__container {
   width: min(100% - 3.125rem, 75rem);
   height: 100%;
   display: flex;
@@ -96,24 +99,24 @@ header .container.container .bookmark-logo img {
   flex-direction: column;
   align-items: stretch;
 }
-.mobile__navigation__container__header {
+header .container .mobile__navigation__container__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.5625em 0;
 }
-.mobile__navigation__container__header__logo {
+header .container .mobile__navigation__container__header__logo {
   cursor: pointer;
 }
-.mobile__navigation__container__header__close {
+header .container .mobile__navigation__container__header__close {
   cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;
 }
-.mobile__navigation__body {
+header .container .mobile__navigation__body {
   margin-top: 1.875em;
 }
-.mobile__navigation__body ul {
+header .container .mobile__navigation__body ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,35 +125,35 @@ header .container.container .bookmark-logo img {
   align-items: stretch;
   margin: 0.625em 0;
 }
-.mobile__navigation__body ul li {
+header .container .mobile__navigation__body ul li {
   padding: 1.25em 0;
   border-top: 1px solid hsl(229deg, 8%, 60%);
   width: 100%;
   text-align: center;
 }
-.mobile__navigation__body ul li a {
+header .container .mobile__navigation__body ul li a {
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.1875rem;
+  font-size: clamp(0.9375rem, 4vw, 1.5625rem);
   letter-spacing: 0.125em;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-.mobile__navigation__body ul li a:hover {
+header .container .mobile__navigation__body ul li a:hover {
   color: hsl(229deg, 8%, 60%);
 }
-.mobile__navigation__body ul li:nth-last-child(2) {
+header .container .mobile__navigation__body ul li:nth-last-child(2) {
   border-bottom: 1px solid hsl(229deg, 8%, 60%);
 }
-.mobile__navigation__body ul a {
+header .container .mobile__navigation__body ul a {
   text-decoration: none;
 }
-.mobile__navigation__body ul a a:visited,
-.mobile__navigation__body ul a a:active {
+header .container .mobile__navigation__body ul a a:visited,
+header .container .mobile__navigation__body ul a a:active {
   text-decoration: none;
 }
-.mobile__navigation__body ul a .btn {
+header .container .mobile__navigation__body ul a .btn {
   margin-top: 1.875em;
   width: 100%;
   display: block;
@@ -165,36 +168,35 @@ header .container.container .bookmark-logo img {
   letter-spacing: 0.125em;
   transition: background-color 0.3s ease;
 }
-.mobile__navigation__body ul a .btn:hover {
+header .container .mobile__navigation__body ul a .btn:hover {
   background-color: #fff;
   color: hsla(229deg, 31%, 21%, 0.978);
 }
-.mobile__navigation__body ul .me {
+header .container .mobile__navigation__body ul .me {
   width: 3.75rem;
   height: 3.75rem;
   margin: 3.125rem auto 0 auto;
   border-radius: 100%;
   transition: 100ms ease-in;
 }
-.mobile__navigation__body ul .me:hover {
+header .container .mobile__navigation__body ul .me:hover {
   border: 2px solid #fff;
   cursor: pointer;
 }
-.mobile__navigation__footer {
+header .container .mobile__navigation__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   justify-content: center;
   padding-bottom: 1.875em;
 }
-.mobile__navigation__footer .facebook,
-.mobile__navigation__footer .twitter {
+header .container .mobile__navigation__footer .facebook,
+header .container .mobile__navigation__footer .twitter {
   width: 2.8125rem;
   margin: 0 1.25em;
   cursor: pointer;
 }
-
-.show-nav.mobile__navigation {
+header .container .mobile__navigation.show-nav {
   transform: translateX(0%);
 }
 
