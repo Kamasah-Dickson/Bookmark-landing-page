@@ -445,7 +445,7 @@ main .hero-section .container .left-container p {
   gap: 2.5em;
 }
 .download .download-body .container .grid-container .box {
-  box-shadow: -0.0625rem 0.3125rem 0.4375rem 0.25rem hsla(231deg, 69%, 60%, 0.096);
+  box-shadow: -0.0625rem 0.25rem 0.5rem 0.25rem hsla(231deg, 69%, 60%, 0.103);
   border-radius: 0.25rem;
   display: flex;
   align-items: center;
