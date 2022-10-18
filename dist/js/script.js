@@ -4,13 +4,14 @@ const tabs = document.querySelectorAll('.tab');
 const contents = document.querySelectorAll('.tab-container');
 
 // ==remove transitions after windows loads
-window.addEventListener('load', ()=> {
-	document.body.classList.remove('.trans');
+window.addEventListener('load', () => {
+	document.body.classList.remove('trans');
 });
 
 //================ after-document-loads===========
 window.addEventListener('DOMContentLoaded', () => {
-	console.log('loaded');
+	document.body.classList.remove('.trans');
+
 	const menu = document
 		.getElementById('hamburger')
 		.addEventListener('click', () => {
