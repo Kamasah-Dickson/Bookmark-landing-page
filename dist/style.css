@@ -445,15 +445,15 @@ main .hero-section .container .left-container p {
   gap: 2.5em;
 }
 .download .download-body .container .grid-container .box {
-  box-shadow: -0.0625rem 0.25rem 0.5rem 0.25rem hsla(231deg, 69%, 60%, 0.103);
-  border-radius: 0.25rem;
+  box-shadow: -0.0625rem 0.25rem 0.625rem -0.0625rem hsl(229deg, 8%, 60%), -0.0625rem 0.125rem 0.5rem -0.0625rem hsla(229deg, 8%, 60%, 0.041);
+  border-radius: 0.375rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 2.8125em 0 1.25em 0;
+  padding: 2.8125em 0 1.5625em 0;
   width: min(100% - 0.9375rem, 25rem);
   margin-inline: auto;
 }

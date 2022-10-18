@@ -13,13 +13,13 @@
 				grid-template-columns: 1fr;
 				gap: u.em(40);
 				.box {
-					box-shadow: u.rem(-1) u.rem(4) u.rem(8) u.rem(4)g.$Soft-Blue4;
-					border-radius: u.rem(4);
+					box-shadow: u.rem(-1) u.rem(4) u.rem(10) u.rem(-1)g.$Grayish-Blue, u.rem(-1) u.rem(2) u.rem(8) u.rem(-1)g.$Grayish-Blue2;
+					border-radius: u.rem(6);
 					@include u.flex;
 					flex-direction: column;
 					justify-content: center;
 					text-align: center;
-					padding: u.em(45) 0 u.em(20) 0;
+					padding: u.em(45) 0 u.em(25) 0;
 					width: min(100% - u.rem(15), u.rem(400));
 					margin-inline: auto;
 					.extension-head {
