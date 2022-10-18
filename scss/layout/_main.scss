@@ -1,0 +1,56 @@
+@use '../util/' as u;
+@use '../globals/' as g;
+
+.download {
+	margin-top: u.em(150);
+	.download-header {
+		margin-bottom: u.em(30);
+	}
+	.download-body {
+		.container {
+			.grid-container {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: u.em(40);
+				.box {
+					box-shadow: u.rem(-1) u.rem(5) u.rem(7) u.rem(4)g.$Soft-Blue4;
+					border-radius: u.rem(4);
+					@include u.flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: center;
+					padding: u.em(45) 0 u.em(20) 0;
+					width: min(100% - u.rem(15), u.rem(400));
+					margin-inline: auto;
+					.extension-head {
+						.img {
+							width: u.rem(90);
+							margin-inline: auto;
+							margin-bottom: u.em(20);
+						}
+						p {
+							color: g.$Grayish-Blue;
+							margin-top: u.em(3);
+							font-size: clamp(u.rem(6), u.rem(7) + 2vw, u.rem(21));
+						}
+					}
+					.extension-body {
+						margin-top: u.em(40);
+						padding-top: u.em(20);
+						border-top: u.rem(3) dotted g.$Soft-Blue3;
+						width: 100%;
+						.extension-button{
+							button{
+								@include u.focused;
+								display: block;
+								padding-inline:u.em(20);
+								width:80%;
+								margin-inline:auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -63,7 +63,7 @@
 			.tab-body {
 				.tab-container {
 					display: none;
-					transition: translate 0.3s ease-in;
+
 					.left-container {
 						margin-bottom: clamp(u.em(0), u.rem(50) + 15vw, u.rem(150));
 						position: relative;
@@ -77,6 +77,15 @@
 							height: clamp(u.rem(160), 50vw, u.rem(370));
 							background-color: g.$Soft-Blue;
 							border-bottom-right-radius: u.rem(80);
+						}
+					}
+					.right-container{
+						h5{
+							margin-top:0;
+						}
+						button{
+							@include u.focused;
+							display:none;
 						}
 					}
 				}
