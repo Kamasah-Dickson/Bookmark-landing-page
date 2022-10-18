@@ -1,6 +1,7 @@
 @use '../util/' as u;
 @use '../globals' as g;
 
+
 header {
 	position: fixed;
 	top: 0;
@@ -28,13 +29,6 @@ header {
 					box-shadow: none;
 					border: none;
 					display: block;
-
-					&:hover {
-						color: g.$Soft-Red;
-						background-color: transparent;
-						transition: background-color 45ms ease-in;
-					
-					}
 				}
 			}
 			li {
@@ -186,3 +180,4 @@ header {
 		}
 	}
 }
+

@@ -1,0 +1,102 @@
+@use '../util/' as u;
+@use '../globals/' as g;
+.feature {
+	padding-top: u.em(90);
+	.container {
+		.tabs-section {
+			margin-top: u.em(50);
+
+			.line {
+				width: min(100%, u.rem(700));
+				margin-inline: auto;
+				height: u.rem(3);
+				background-color: g.$Grayish-Blue;
+				display: none;
+			}
+			.tab-header {
+				display: grid;
+				grid-template-columns: 1fr;
+				margin-bottom: 4rem;
+				width: clamp(100% - 5px, 36px + 4vw, 100%);
+				margin-inline: auto;
+
+				.tab {
+					position: relative;
+					li {
+						width: fit-content;
+						margin: 0 auto;
+						text-align: center;
+						padding-block: u.em(20);
+						margin-inline: auto;
+						list-style: none;
+						color: g.$Grayish-Blue;
+						cursor:pointer;
+						
+					}
+					&::after {
+						content: '';
+						position: absolute;
+						top: u.em(0);
+						left: 0;
+						height: u.rem(1);
+						width: 100%;
+						margin: 0 auto;
+						background-color: g.$Grayish-Blue;
+					}
+				}
+				.last-child {
+					li {
+						position: relative;
+					}
+					&::before {
+						content: '';
+						position: absolute;
+						bottom: u.em(-1);
+						left: 0;
+						height: u.rem(1);
+						width: 100%;
+						margin: 0 auto;
+						background-color: g.$Grayish-Blue;
+					}
+				}
+			}
+			.tab-body {
+				.tab-container {
+					display: none;
+					transition: translate 0.3s ease-in;
+					.left-container {
+						margin-bottom: clamp(u.em(0), u.rem(50) + 15vw, u.rem(150));
+						position: relative;
+						&::before {
+							content: '';
+							z-index: -1;
+							position: absolute;
+							top: clamp(u.rem(5), u.rem(6) + 15vw, u.rem(150));
+							left: u.rem(-90);
+							width: 100%;
+							height: clamp(u.rem(160), 50vw, u.rem(370));
+							background-color: g.$Soft-Blue;
+							border-bottom-right-radius: u.rem(80);
+						}
+					}
+				}
+				.active {
+					display: grid;
+					grid-template-columns: 1fr;
+					.left-container {
+						@include u.transform-left(0.3s, ease);
+					}
+					.right-container {
+						@include u.transform-right(0.3s, ease-in);
+					}
+				}
+			}
+		}
+	}
+}
+
+// =======JS:add class===========
+.active li {
+	border-bottom: u.rem(4) solid g.$Soft-Red;
+	color: g.$Very-Dark-Blue;
+}

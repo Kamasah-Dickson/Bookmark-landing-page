@@ -10,9 +10,8 @@
 @mixin focused {
 	background-color: g.$Soft-Blue;
 	color: g.$white;
-	border: none;
 	padding-block: u.em(15);
-	padding-inline:clamp(u.em(7),2vw,u.em(15));
+	padding-inline: clamp(u.em(7), 2vw, u.em(15));
 	font-size: clamp(u.rem(15), 3vw, u.rem(20));
 	border-radius: u.em(4);
 	cursor: pointer;
@@ -20,34 +19,86 @@
 	outline: 1px solid g.$Soft-Blue;
 	font-weight: 400;
 	margin-right: u.em(10);
+	border: 2px solid g.$Soft-Blue;
+	&:hover {
+		background-color: transparent;
+		color: g.$Soft-Blue;
+		transition: background-color 0.3s ease-in, color 0.2s ease-in;
+		border: 2px solid g.$Soft-Blue;
+	}
 }
 
 @mixin normal {
-	background-color: g.$white;
 	color: g.$Very-Dark-Blue;
-	border: none;
 	padding-block: u.em(15);
-	padding-inline:clamp(u.em(7),2vw,u.em(15));
+	padding-inline: clamp(u.em(7), 2vw, u.em(15));
 	font-size: clamp(u.rem(15), 3vw, u.rem(20));
 	border-radius: u.em(4);
+	background-color: g.$Grayish-Blue2;
 	cursor: pointer;
-	box-shadow: 0 u.rem(3) u.rem(5) u.rem(-1) g.$Soft-Blue2;
-	outline: 1px solid g.$white;
+	box-shadow: 0 u.rem(5) u.rem(8) u.rem(-1) g.$Soft-Blue3;
+	outline: u.rem(1) solid g.$white;
 	font-weight: 400;
 	margin-left: u.em(10);
+	border: u.rem(1) solid transparent;
+
+	&:hover {
+		background-color: transparent;
+		transition: background-color 0.3s ease-in, box-shadow 0.2s ease;
+		outline: u.rem(1) solid g.$Grayish-Blue;
+		border-color: g.$Grayish-Blue;
+		box-shadow: none;
+	}
 }
 
 @mixin cta {
 	background-color: g.$Soft-Red;
 	color: g.$white;
-	border: none;
 	padding: u.em(15) u.em(40);
-	font-size:rem(6);
+	font-size: rem(6);
 	border-radius: u.em(4);
 	cursor: pointer;
 	box-shadow: 0 u.rem(3) u.rem(5) u.rem(-1) g.$Soft-Red;
-	outline: 1px solid g.$Soft-Red;
 	font-weight: 400;
 	margin-left: u.em(5);
 	text-transform: uppercase;
+	border: 2px solid g.$Soft-Red;
+	&:hover {
+		outline: 2px solid g.$Soft-Red;
+		color: g.$Soft-Red;
+		background-color: transparent;
+		transition: background-color 45ms ease-in;
+	}
+}
+
+// =========transitions========
+
+@keyframes left {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes right {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+//animation:
+@mixin transform-left($duration, $state) {
+	animation: left $duration $state;
+}
+@mixin transform-right($duration, $state) {
+	animation: right $duration $state;
 }

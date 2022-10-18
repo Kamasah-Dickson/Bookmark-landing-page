@@ -1,19 +1,44 @@
 const mobileNav = document.querySelector('.mobile__navigation');
-const menu = document.getElementById('hamburger');
-const closeMenu = document.getElementById('close');
-const mobileLinksParent = document.querySelector(
-	'.mobile__navigation__body__togglers'
-); //for Event Deligation
+// =========tabs===============
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-container');
 
-closeMenu.addEventListener('click', () => {
-	mobileNav.classList.remove('show-nav');
+// ==remove transitions after windows loads
+window.addEventListener('load', ()=> {
+	document.body.classList.remove('.trans');
 });
 
-menu.addEventListener('click', () => {
-	mobileNav.classList.remove('move-up');
-	mobileNav.classList.add('show-nav');
-});
+//================ after-document-loads===========
+window.addEventListener('DOMContentLoaded', () => {
+	console.log('loaded');
+	const menu = document
+		.getElementById('hamburger')
+		.addEventListener('click', () => {
+			mobileNav.classList.add('show-nav');
+		});
+	const closeMenu = document
+		.getElementById('close')
+		.addEventListener('click', () => {
+			mobileNav.classList.remove('show-nav');
+		});
+	const mobileLinksParent = document
+		.querySelector('.mobile__navigation__body__togglers')
+		.addEventListener('click', () => {
+			mobileNav.classList.remove('show-nav');
+		});
+	//for Event Deligation
 
-mobileLinksParent.addEventListener('click', () => {
-	mobileNav.classList.remove('show-nav');
+	// ====tabs===
+	tabs.forEach((tab, index) => {
+		tab.addEventListener('click', () => {
+			contents.forEach((content) => {
+				content.classList.remove('active');
+			});
+			tabs.forEach((tab) => {
+				tab.classList.remove('active');
+			});
+			tabs[index].classList.add('active');
+			contents[index].classList.add('active');
+		});
+	});
 });

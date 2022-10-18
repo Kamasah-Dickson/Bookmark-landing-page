@@ -8,8 +8,8 @@ main {
 		.container {
 			display: grid;
 			grid-template-columns: 1fr;
+			justify-content: space-between;
 			align-items: center;
-			gap: u.em(50);
 			caret-color: transparent;
 			
 			.left-container {
@@ -42,12 +42,13 @@ main {
 				}
 			}
 			@include u.breakpoints(medium) {
-				grid-template-columns: u.rem(450) u.rem(670);
+				grid-template-columns: u.rem(465) u.rem(650);
 				.left-container {
 					order: 1;
 					h1,
 					p {
 						text-align: left;
+						margin-top:0;
 					}
 					.hero-buttons {
 						justify-content: start;
