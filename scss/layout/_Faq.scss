@@ -17,10 +17,10 @@
 				overflow: hidden;
 				cursor: pointer;
 				-webkit-user-drag: none;
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
+				user-select: none;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
 
 				&::before {
 					content: '';
@@ -43,7 +43,6 @@
 						background-size: cover;
 						background-position: center center;
 					}
-					
 
 					h6 {
 						font-size: clamp(u.rem(7), u.rem(8) + 2vw, u.rem(23));
@@ -53,7 +52,7 @@
 					text-align: left;
 					line-height: 1.5;
 					@include u.smooth(0.3s, ease);
-                    margin:0;
+					margin: 0;
 				}
 			}
 			.height {
@@ -62,5 +61,3 @@
 		}
 	}
 }
-
-
