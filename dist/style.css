@@ -38,6 +38,26 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes smooth {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes smooth {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 *,
 *::before,
 *::after {
@@ -115,6 +135,65 @@ h5 {
   font-size: clamp(1.5625rem, 4vw, 3.125rem);
   margin-bottom: 0.625em;
   margin-top: 1.25em;
+}
+
+.faq-section .container .faq-header {
+  padding-top: 5em;
+  margin-bottom: 3.125em;
+}
+.faq-section .container .faq {
+  width: min(100% - 1.25em, 43.75rem);
+  margin-inline: auto;
+}
+.faq-section .container .faq .question {
+  position: relative;
+  padding-block: 1.5625em;
+  max-height: 3.75rem;
+  transition: 0.4s ease;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.faq-section .container .faq .question::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: hsl(229deg, 8%, 60%);
+}
+.faq-section .container .faq .question .faq-question {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25em;
+}
+.faq-section .container .faq .question .faq-question .img {
+  width: 0.8125rem;
+  height: 0.8125rem;
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.faq-section .container .faq .question .faq-question h6 {
+  font-size: clamp(0.4375rem, 0.5rem + 2vw, 1.4375rem);
+}
+.faq-section .container .faq .question p {
+  text-align: left;
+  line-height: 1.5;
+  -webkit-animation: smooth 0.3s ease;
+          animation: smooth 0.3s ease;
+  margin: 0;
+}
+.faq-section .container .faq .height {
+  max-height: 18.75rem;
 }
 
 .trans * {
@@ -439,6 +518,10 @@ main .hero-section .container .left-container p {
 .download .download-header {
   margin-bottom: 1.875em;
 }
+.download .download-header h5 {
+  margin-top: auto;
+  padding-top: 3.125em;
+}
 .download .download-body .container .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -487,7 +570,7 @@ main .hero-section .container .left-container p {
   margin-right: 0.625em;
   border: 2px solid hsl(231deg, 69%, 60%);
   display: block;
-  padding-inline: 1.25em;
+  padding-inline: 0.9375em;
   width: 80%;
   margin-inline: auto;
 }
@@ -574,7 +657,7 @@ main .hero-section .container .left-container p {
   background-color: hsl(231deg, 69%, 60%);
   border-bottom-right-radius: 5rem;
 }
-.feature .container .tabs-section .tab-body .tab-container .right-container h5 {
+.feature .container .tabs-section .tab-body .tab-container .right-container h5, .feature .container .tabs-section .tab-body .tab-container .right-container h3, .feature .container .tabs-section .tab-body .tab-container .right-container h4 {
   margin-top: 0;
 }
 .feature .container .tabs-section .tab-body .tab-container .right-container button {

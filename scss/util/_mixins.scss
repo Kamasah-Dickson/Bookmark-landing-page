@@ -95,10 +95,27 @@
 	}
 }
 
-//animation:
+//==========animation==========
 @mixin transform-left($duration, $state) {
 	animation: left $duration $state;
 }
 @mixin transform-right($duration, $state) {
 	animation: right $duration $state;
+}
+
+// =========smooth===========
+
+@keyframes smooth{
+	from{
+		transform: translateY(20%);
+		opacity:0;
+	}
+	to{
+		transform:translateY(0);
+		opacity:1;
+	}
+
+}
+@mixin smooth($duration,$state){
+	animation:smooth $duration $state;
 }

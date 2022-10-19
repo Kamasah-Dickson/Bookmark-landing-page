@@ -5,6 +5,10 @@
 	margin-top: u.em(150);
 	.download-header {
 		margin-bottom: u.em(30);
+		h5{
+			margin-top:auto;
+			padding-top:u.em(50);
+		}
 	}
 	.download-body {
 		.container {
@@ -43,7 +47,7 @@
 							button{
 								@include u.focused;
 								display: block;
-								padding-inline:u.em(20);
+								padding-inline:u.em(15);
 								width:80%;
 								margin-inline:auto;
 							}
