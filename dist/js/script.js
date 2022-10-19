@@ -43,18 +43,18 @@ function optimize() {
 	});
 
 	// ========faq-section===============
-		faqs.forEach((faq, index) => {
-			faq.addEventListener('click', () => {
-				faq.classList.toggle('height');
-				faqImg.forEach((img) => {
-					if (!faq.classList.contains('height')) {
-						img.src = '../../images/icon-arrow.svg';
-						img.style.transform = 'rotate(0deg)';
-					} else {
-						faqImg[index].src = '../../images/icon-arrow2.svg';
-						faqImg[index].style.transform = 'rotate(180deg)';
-					}
-				});
+	faqs.forEach((faq, index) => {
+		faq.addEventListener('click', () => {
+			faq.classList.toggle('height');
+			faqImg.forEach((img) => {
+				if (!faq.classList.contains('height')) {
+					img.src = './images/icon-arrow.svg';
+					img.style.transform = 'rotate(0deg)';
+				} else {
+					faqImg[index].src = './images/icon-arrow2.svg';
+					faqImg[index].style.transform = 'rotate(180deg)';
+				}
 			});
 		});
+	});
 }
