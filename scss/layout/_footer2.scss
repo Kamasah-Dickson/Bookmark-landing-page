@@ -1,0 +1,46 @@
+@use '../util' as u;
+@use '../globals' as g;
+
+footer {
+	background-color: g.$Very-Dark-Blue;
+	padding-block: u.em(50);
+	.container {
+		@include u.flex;
+		flex-direction: column;
+		.left-container {
+			text-align: center;
+			.logo {
+				margin-bottom: u.em(20);
+			}
+			.nav {
+				@include u.flex;
+				flex-direction: column;
+				li {
+					margin-block: u.em(8);
+					a {
+						color: g.$white;
+						font-weight: 400;
+						text-transform: uppercase;
+						font-size: u.rem(15);
+					}
+				}
+			}
+		}
+		.right-container {
+			.social {
+				margin-top: u.em(30);
+				@include u.flex;
+				gap: u.rem(45);
+			}
+		}
+	}
+	.attribution {
+		font-size: clamp(u.rem(10), u.rem(7) + 2vw, u.rem(19));
+		margin-top: u.em(70);
+		color: g.$white;
+		a {
+			color: g.$Soft-Red;
+			text-transform: uppercase;
+		}
+	}
+}

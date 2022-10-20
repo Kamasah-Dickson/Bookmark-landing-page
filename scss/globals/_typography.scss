@@ -21,12 +21,17 @@ span {
 }
 
 h1,
+h6 {
+	font-size: clamp(u.rem(25), 4vw, u.rem(50));
+	margin-bottom: u.em(10);
+	margin-top: u.em(20);
+}
+
 h2,
 h3,
 h4,
-h5,
-h6 {
-	font-size: clamp(u.rem(25), 4vw, u.rem(50));
+h5 {
+	font-size: clamp(u.rem(25), 4vw, u.rem(35));
 	margin-bottom: u.em(10);
 	margin-top: u.em(20);
 }

@@ -29,6 +29,7 @@
 			justify-content: center;
 			max-width: u.rem(600);
 			margin-inline: auto;
+
 			.input {
 				width: 100%;
 				margin-bottom: u.rem(20);
@@ -94,6 +95,20 @@
 					background-color: g.$Soft-Red;
 					color: g.$white;
 					transition: 0;
+				}
+			}
+			@include u.breakpoints(small) {
+				flex-direction: row;
+				align-items: center;
+				gap: u.rem(20);
+				.input {
+					margin: 0;
+					width: 50%;
+				}
+				input[type='button'] {
+					padding-inline: u.rem(20);
+					width: 150px;
+					// width: 20%;
 				}
 			}
 		}

@@ -4,33 +4,47 @@
 .download {
 	margin-top: u.em(150);
 	.download-header {
-		margin-bottom: u.em(30);
-		h5{
-			margin-top:auto;
-			padding-top:u.em(50);
+		margin-bottom: u.em(50);
+		h5 {
+			margin-top: auto;
+			padding-top: u.em(50);
 		}
 	}
 	.download-body {
 		.container {
 			.grid-container {
 				display: grid;
-				grid-template-columns: 1fr;
+				grid-template-columns: repeat(auto-fit, minmax(u.rem(250), 1fr));
 				gap: u.em(40);
+				@include u.breakpoints(large-x) {
+					grid-template-columns: 1fr 1fr 1fr;
+					gap: u.em(0);
+					.box {
+						width: min(100% - u.rem(10), u.rem(300));
+					}
+					.box2 {
+						transform: translateY(u.rem(30));
+					}
+					.box3 {
+						transform: translateY(u.rem(50));
+					}
+				}
+
 				.box {
-					box-shadow: u.rem(-1) u.rem(4) u.rem(10) u.rem(-1)g.$Grayish-Blue, u.rem(-1) u.rem(2) u.rem(8) u.rem(-1)g.$Grayish-Blue2;
-					border-radius: u.rem(6);
+					box-shadow: u.rem(1) u.rem(4) u.rem(5) u.rem(3) rgba(0, 0, 0, 0.096);
+					border-radius: u.rem(10);
 					@include u.flex;
 					flex-direction: column;
 					justify-content: center;
 					text-align: center;
 					padding: u.em(45) 0 u.em(25) 0;
-					width: min(100% - u.rem(15), u.rem(400));
+					width: min(100% - u.rem(10), u.rem(300));
 					margin-inline: auto;
 					.extension-head {
 						.img {
-							width: u.rem(90);
+							width: u.rem(95);
 							margin-inline: auto;
-							margin-bottom: u.em(20);
+							margin-bottom: u.em(25);
 						}
 						p {
 							color: g.$Grayish-Blue;
@@ -43,17 +57,24 @@
 						padding-top: u.em(20);
 						border-top: u.rem(3) dotted g.$Soft-Blue3;
 						width: 100%;
-						.extension-button{
-							button{
+						.extension-button {
+							button {
 								@include u.focused;
 								display: block;
-								padding-inline:u.em(15);
-								width:80%;
-								margin-inline:auto;
+								padding-inline: u.em(10);
+								padding-block: u.rem(14);
+								font-size: clamp(u.rem(13), u.rem(10) + 1vw, u.rem(17));
+								width: 80%;
+								margin-inline: auto;
 							}
 						}
 					}
 				}
+				// @include u.breakpoints(large-x) {
+				// 	.box2{
+
+				// 	}
+				// }
 			}
 		}
 	}
