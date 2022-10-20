@@ -40,7 +40,7 @@
 }
 @-webkit-keyframes smooth {
   from {
-    transform: translateY(20%);
+    transform: translateY(80%);
     opacity: 0;
   }
   to {
@@ -50,7 +50,7 @@
 }
 @keyframes smooth {
   from {
-    transform: translateY(20%);
+    transform: translateY(80%);
     opacity: 0;
   }
   to {
@@ -131,12 +131,16 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-size: clamp(1.5625rem, 4vw, 3.125rem);
   margin-bottom: 0.625em;
   margin-top: 1.25em;
 }
 
+.faq-section .container {
+  margin-bottom: 3.125em;
+}
 .faq-section .container .faq-header {
   padding-top: 5em;
   margin-bottom: 3.125em;
@@ -147,7 +151,6 @@ h5 {
 }
 .faq-section .container .faq .question {
   position: relative;
-  padding-block: 1.5625em;
   max-height: 3.75rem;
   transition: 0.4s ease;
   overflow: hidden;
@@ -161,7 +164,7 @@ h5 {
 .faq-section .container .faq .question::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: 0.0625rem;
@@ -184,20 +187,163 @@ h5 {
 }
 .faq-section .container .faq .question .faq-question h6 {
   font-size: clamp(0.4375rem, 0.5rem + 2vw, 1.4375rem);
+  margin-bottom: 0;
+}
+.faq-section .container .faq .question .faq-question h6:hover {
+  color: hsl(0deg, 94%, 66%);
 }
 .faq-section .container .faq .question p {
   text-align: left;
   line-height: 1.5;
-  -webkit-animation: smooth 0.3s ease;
-          animation: smooth 0.3s ease;
   margin: 0;
 }
 .faq-section .container .faq .height {
   max-height: 18.75rem;
 }
+.faq-section .container .faq .height p {
+  -webkit-animation: smooth 0.5s ease;
+          animation: smooth 0.5s ease;
+}
+.faq-section .container .focused {
+  background-color: hsl(231deg, 69%, 60%);
+  color: #fff;
+  padding-block: 0.9375em;
+  padding-inline: clamp(0.4375em, 2vw, 0.9375em);
+  font-size: clamp(0.9375rem, 3vw, 1.25rem);
+  border-radius: 0.25em;
+  cursor: pointer;
+  box-shadow: 0 0.1875rem 0.3125rem -0.0625rem hsla(231deg, 69%, 60%, 0.048);
+  outline: 1px solid hsl(231deg, 69%, 60%);
+  font-weight: 400;
+  margin-right: 0.625em;
+  border: 2px solid hsl(231deg, 69%, 60%);
+  display: block;
+  width: 8.125rem;
+  margin-inline: auto;
+  margin-top: 3.75em;
+}
+.faq-section .container .focused:hover {
+  background-color: transparent;
+  color: hsl(231deg, 69%, 60%);
+  transition: background-color 0.3s ease-in, color 0.2s ease-in;
+  border: 2px solid hsl(231deg, 69%, 60%);
+}
 
 .trans * {
   transition: none !important;
+}
+
+.update {
+  background-color: hsl(231deg, 69%, 60%);
+  padding: 3.125em 0 1.875em 0;
+}
+.update .container .update-header {
+  text-align: center;
+  margin-bottom: 4.375em;
+  color: #fff;
+}
+.update .container .update-header p {
+  color: #fff;
+  letter-spacing: 0.21875em;
+}
+.update .container .update-header h6 {
+  font-weight: 400;
+  margin-top: 0.625em;
+  margin-bottom: 0;
+}
+.update .container form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 37.5rem;
+  margin-inline: auto;
+}
+.update .container form .input {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+.update .container form .input input[type=email] {
+  border-radius: 0.125rem;
+  padding-left: 0.625rem;
+  height: 3.125rem;
+  width: 100%;
+  border: none;
+  color: hsla(229deg, 31%, 21%, 0.978);
+  font-size: 1.0625rem;
+}
+.update .container form .input input[type=email]:active, .update .container form .input input[type=email]:focus {
+  color: hsla(229deg, 31%, 21%, 0.978);
+  outline: 0.1875rem solid hsla(231deg, 69%, 60%, 0.295);
+}
+.update .container form .input input[type=email]::-moz-placeholder {
+  font-size: 0.875rem;
+}
+.update .container form .input input[type=email]:-ms-input-placeholder {
+  font-size: 0.875rem;
+}
+.update .container form .input input[type=email]::placeholder {
+  font-size: 0.875rem;
+}
+.update .container form .input .error {
+  position: absolute;
+  right: 5%;
+  top: 44%;
+  transform: translate(-5%, -70%);
+  height: 1.875rem;
+  width: 1.875rem;
+  aspect-ratio: 1;
+  display: none;
+}
+.update .container form .input .error-message {
+  text-align: left;
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 0.375rem 0.625rem;
+  display: none;
+}
+.update .container form .invalid-input {
+  background-color: hsl(0deg, 94%, 66%);
+  border-bottom-left-radius: 0.4375rem;
+  border-bottom-right-radius: 0.4375rem;
+  border: 0.1875rem solid hsl(0deg, 94%, 66%);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.update .container form input[type=button] {
+  width: 100%;
+  display: block;
+  color: #fff;
+  background-color: hsl(0deg, 94%, 66%);
+  color: #fff;
+  padding: 0.9375em 2.5em;
+  font-size: rem(6);
+  border-radius: 0.25em;
+  cursor: pointer;
+  box-shadow: 0 0.1875rem 0.3125rem -0.0625rem hsl(0deg, 94%, 66%);
+  font-weight: 400;
+  margin-left: 0.3125em;
+  text-transform: uppercase;
+  border: 2px solid hsl(0deg, 94%, 66%);
+  text-transform: capitalize;
+  box-shadow: none;
+  font-size: 1rem;
+  margin: 0;
+}
+.update .container form input[type=button]:hover {
+  outline: 2px solid hsl(0deg, 94%, 66%);
+  color: hsl(0deg, 94%, 66%);
+  background-color: transparent;
+  transition: background-color 45ms ease-in;
+}
+.update .container form input[type=button]:hover {
+  outline: 0;
+  color: hsl(0deg, 94%, 66%);
+  background-color: hsl(0deg, 94%, 66%);
+  color: #fff;
+  transition: 0;
 }
 
 header {

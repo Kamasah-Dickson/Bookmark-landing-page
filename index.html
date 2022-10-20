@@ -358,8 +358,21 @@
 						<h6>Stay up-to-date with what we’re doing</h6>
 					</div>
 					<form action="#">
-						<input type="email" id="email" />
-						<input type="butotn" value="contact us" />
+						<div class="input">
+							<label for="email">
+								<input id="email" type="email" id="email" placeholder="Email" />
+							</label>
+							<img
+								id="error"
+								src="./images/icon-error.svg"
+								alt="error"
+								class="error"
+							/>
+							<p id="message" class="error-message">
+								Whoops, make sure its an email
+							</p>
+						</div>
+						<input id="emailBtn" type="button" value="Contact us" />
 					</form>
 				</div>
 			</div>

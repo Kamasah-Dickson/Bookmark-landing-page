@@ -2,6 +2,7 @@
 @use '../globals/' as g;
 .faq-section {
 	.container {
+		margin-bottom: u.em(50);
 		.faq-header {
 			padding-top: u.em(80);
 			margin-bottom: u.em(50);
@@ -11,7 +12,6 @@
 			margin-inline: auto;
 			.question {
 				position: relative;
-				padding-block: u.em(25);
 				max-height: u.rem(60);
 				transition: 0.4s ease;
 				overflow: hidden;
@@ -25,7 +25,7 @@
 				&::before {
 					content: '';
 					position: absolute;
-					bottom: 0;
+					bottom: -0px;
 					left: 0;
 					width: 100%;
 					height: u.rem(1);
@@ -46,18 +46,32 @@
 
 					h6 {
 						font-size: clamp(u.rem(7), u.rem(8) + 2vw, u.rem(23));
+						margin-bottom: 0;
+						&:hover {
+							color: g.$Soft-Red;
+						}
 					}
 				}
 				p {
 					text-align: left;
 					line-height: 1.5;
-					@include u.smooth(0.3s, ease);
+
 					margin: 0;
 				}
 			}
 			.height {
 				max-height: u.rem(300);
+				p {
+					@include u.smoothe(0.5s, ease);
+				}
 			}
+		}
+		.focused {
+			@include u.focused;
+			display: block;
+			width: u.rem(130);
+			margin-inline: auto;
+			margin-top: u.em(60);
 		}
 	}
 }

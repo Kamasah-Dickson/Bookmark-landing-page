@@ -1,3 +1,101 @@
+@use '../globals' as g;
+@use '../util' as u;
+
 .trans * {
 	transition: none !important;
+}
+
+.update {
+	background-color: g.$Soft-Blue;
+	padding: u.em(50) 0 u.em(30) 0;
+	.container {
+		.update-header {
+			text-align: center;
+			margin-bottom: u.em(70);
+			color: g.$white;
+			p {
+				color: g.$white;
+				letter-spacing: u.em(3.5);
+			}
+			h6 {
+				font-weight: 400;
+				margin-top: u.em(10);
+				margin-bottom: 0;
+			}
+		}
+		form {
+			@include u.flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: u.rem(600);
+			margin-inline: auto;
+			.input {
+				width: 100%;
+				margin-bottom: u.rem(20);
+				position: relative;
+
+				input[type='email'] {
+					border-radius: u.rem(2);
+					padding-left: u.rem(10);
+					height: u.rem(50);
+					width: 100%;
+					border: none;
+					color: g.$Very-Dark-Blue;
+					font-size: u.rem(17);
+					&:active,
+					&:focus {
+						color: g.$Very-Dark-Blue;
+						outline: u.rem(3) solid g.$Soft-Blue3;
+					}
+					&::placeholder {
+						font-size: u.rem(14);
+					}
+				}
+				.error {
+					position: absolute;
+					right: 5%;
+					top: 44%;
+					transform: translate(-5%, -70%);
+					height: u.rem(30);
+					width: u.rem(30);
+					aspect-ratio: 1;
+					display: none;
+				}
+				.error-message {
+					text-align: left;
+					color: g.$white;
+					font-size: u.rem(14);
+					padding: u.rem(6) u.rem(10);
+					display: none;
+				}
+			}
+			.invalid-input {
+				background-color: g.$Soft-Red;
+				border-bottom-left-radius: u.rem(7);
+				border-bottom-right-radius: u.rem(7);
+				border: u.rem(3) solid g.$Soft-Red;
+				border-top-left-radius: u.rem(4);
+				border-top-right-radius: u.rem(4);
+			}
+
+			input[type='button'] {
+				width: 100%;
+				display: block;
+				color: g.$white;
+				@include u.cta;
+				text-transform: capitalize;
+				box-shadow: none;
+				font-size: u.rem(16);
+
+				margin: 0;
+				&:hover {
+					outline: 0;
+					color: g.$Soft-Red;
+					background-color: g.$Soft-Red;
+					color: g.$white;
+					transition: 0;
+				}
+			}
+		}
+	}
 }

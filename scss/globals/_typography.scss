@@ -24,7 +24,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
 	font-size: clamp(u.rem(25), 4vw, u.rem(50));
 	margin-bottom: u.em(10);
 	margin-top: u.em(20);

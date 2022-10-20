@@ -105,17 +105,16 @@
 
 // =========smooth===========
 
-@keyframes smooth{
-	from{
-		transform: translateY(20%);
-		opacity:0;
+@keyframes smooth {
+	from {
+		transform: translateY(80%);
+		opacity: 0;
 	}
-	to{
-		transform:translateY(0);
-		opacity:1;
+	to {
+		transform: translateY(0);
+		opacity: 1;
 	}
-
 }
-@mixin smooth($duration,$state){
-	animation:smooth $duration $state;
+@mixin smoothe($duration, $state) {
+	animation: smooth $duration $state;
 }
