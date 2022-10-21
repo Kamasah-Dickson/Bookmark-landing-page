@@ -4,8 +4,16 @@
 	.container {
 		margin-bottom: u.em(50);
 		.faq-header {
-			padding-top: u.em(80);
+			padding-top: u.em(90);
+			margin-top: u.em(80);
 			margin-bottom: u.em(50);
+			text-align: center;
+			.span {
+				font-size: clamp(u.rem(25), 4vw, u.rem(35));
+			}
+			p {
+				margin-top: u.em(10);
+			}
 		}
 		.faq {
 			width: min(100% - u.em(20), u.rem(700));
