@@ -598,24 +598,24 @@ header .container .mobile__navigation.show-nav {
   transform: translateX(0%);
 }
 
-main {
+.main {
   position: relative;
 }
-main .hero-section {
+.main .hero-section {
   overflow-x: hidden;
   margin-top: clamp(5.9375rem, 20vw, 10em);
 }
-main .hero-section .container {
+.main .hero-section .container {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: center;
   caret-color: transparent;
 }
-main .hero-section .container .left-container {
+.main .hero-section .container .left-container {
   order: 2;
 }
-main .hero-section .container .left-container .hero-buttons {
+.main .hero-section .container .left-container .hero-buttons {
   margin-top: 1.875em;
   margin-bottom: 1.25em;
   display: flex;
@@ -623,7 +623,7 @@ main .hero-section .container .left-container .hero-buttons {
   justify-content: space-between;
   justify-content: center;
 }
-main .hero-section .container .left-container .hero-buttons .focused {
+.main .hero-section .container .left-container .hero-buttons .focused {
   background-color: hsl(231deg, 69%, 60%);
   color: #fff;
   padding-block: 0.9375em;
@@ -637,13 +637,13 @@ main .hero-section .container .left-container .hero-buttons .focused {
   margin-right: 0.625em;
   border: 0.125rem solid hsl(231deg, 69%, 60%);
 }
-main .hero-section .container .left-container .hero-buttons .focused:hover {
+.main .hero-section .container .left-container .hero-buttons .focused:hover {
   background-color: transparent;
   color: hsl(231deg, 69%, 60%);
   transition: background-color 0.3s ease-in, color 0.2s ease-in;
   border: 0.125rem solid hsl(231deg, 69%, 60%);
 }
-main .hero-section .container .left-container .hero-buttons .normal {
+.main .hero-section .container .left-container .hero-buttons .normal {
   color: hsla(229deg, 31%, 21%, 0.978);
   padding-block: 0.9375em;
   padding-inline: clamp(0.4375em, 2vw, 0.9375em);
@@ -657,17 +657,17 @@ main .hero-section .container .left-container .hero-buttons .normal {
   margin-left: 0.625em;
   border: 0.0625rem solid transparent;
 }
-main .hero-section .container .left-container .hero-buttons .normal:hover {
+.main .hero-section .container .left-container .hero-buttons .normal:hover {
   background-color: transparent;
   transition: background-color 0.3s ease-in, box-shadow 0.2s ease;
   outline: 0.0625rem solid hsl(229deg, 8%, 60%);
   border-color: hsl(229deg, 8%, 60%);
   box-shadow: none;
 }
-main .hero-section .container .right-container {
+.main .hero-section .container .right-container {
   position: relative;
 }
-main .hero-section .container .right-container::before {
+.main .hero-section .container .right-container::before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -680,24 +680,24 @@ main .hero-section .container .right-container::before {
   box-shadow: 0 0 0.125rem 0.125rem hsl(231deg, 69%, 60%);
 }
 @media (min-width: 56.25rem) {
-  main .hero-section .container {
+  .main .hero-section .container {
     grid-template-columns: 29.0625rem 40.625rem;
   }
-  main .hero-section .container .left-container {
+  .main .hero-section .container .left-container {
     order: 1;
   }
-  main .hero-section .container .left-container h1,
-main .hero-section .container .left-container p {
+  .main .hero-section .container .left-container h1,
+.main .hero-section .container .left-container p {
     text-align: left;
     margin-top: 0;
   }
-  main .hero-section .container .left-container .hero-buttons {
+  .main .hero-section .container .left-container .hero-buttons {
     justify-content: start;
   }
-  main .hero-section .container .right-container {
+  .main .hero-section .container .right-container {
     order: 2;
   }
-  main .hero-section .container .right-container::before {
+  .main .hero-section .container .right-container::before {
     right: -11.25rem;
   }
 }
@@ -706,11 +706,15 @@ main .hero-section .container .left-container p {
   margin-top: 9.375em;
 }
 .download .download-header {
+  text-align: center;
+  padding-top: 3.125em;
   margin-bottom: 3.125em;
 }
-.download .download-header h5 {
-  margin-top: auto;
-  padding-top: 3.125em;
+.download .download-header span {
+  font-size: clamp(1.5625rem, 4vw, 2.1875rem);
+}
+.download .download-header p {
+  margin-top: 1.5em;
 }
 .download .download-body .container .grid-container {
   display: grid;

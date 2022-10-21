@@ -4,10 +4,14 @@
 .download {
 	margin-top: u.em(150);
 	.download-header {
+		text-align: center;
+		padding-top: u.em(50);
 		margin-bottom: u.em(50);
-		h5 {
-			margin-top: auto;
-			padding-top: u.em(50);
+		span {
+			font-size: clamp(u.rem(25), 4vw, u.rem(35));
+		}
+		p {
+			margin-top: u.em(24);
 		}
 	}
 	.download-body {
