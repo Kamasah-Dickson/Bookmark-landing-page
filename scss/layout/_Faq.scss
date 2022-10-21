@@ -9,6 +9,9 @@
 		}
 		.faq {
 			width: min(100% - u.em(20), u.rem(700));
+			@include u.breakpoints(large) {
+				width: min(100% - u.em(20), u.rem(540));
+			}
 			margin-inline: auto;
 			.question {
 				position: relative;

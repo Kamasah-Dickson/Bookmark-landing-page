@@ -64,7 +64,7 @@
 	text-transform: uppercase;
 	border: u.rem(2) solid g.$Soft-Red;
 	&:hover {
-		outline: u.rem(2) solid g.$Soft-Red;
+		outline: u.rem(1.5) solid g.$Soft-Red;
 		color: g.$Soft-Red;
 		background-color: transparent;
 		transition: background-color 45ms ease-in;

@@ -1,7 +1,6 @@
 @use '../util/' as u;
 @use '../globals' as g;
 
-
 header {
 	position: fixed;
 	top: 0;
@@ -24,12 +23,6 @@ header {
 			a:visited,
 			a:active {
 				text-decoration: none;
-				.btn {
-					@include u.cta;
-					box-shadow: none;
-					border: none;
-					display: block;
-				}
 			}
 			li {
 				a {
@@ -41,6 +34,12 @@ header {
 					&:hover {
 						color: g.$Soft-Red;
 					}
+				}
+				.btn {
+					@include u.cta;
+					box-shadow: none;
+					border: none;
+					display: block;
 				}
 			}
 		}
@@ -119,13 +118,6 @@ header {
 						&:nth-last-child(2) {
 							border-bottom: u.rem(1) solid g.$Grayish-Blue;
 						}
-					}
-					a {
-						text-decoration: none;
-						a:visited,
-						a:active {
-							text-decoration: none;
-						}
 						.btn {
 							margin-top: u.em(30);
 							width: 100%;
@@ -145,6 +137,14 @@ header {
 								color: g.$Very-Dark-Blue;
 							}
 						}
+					}
+					a {
+						text-decoration: none;
+						a:visited,
+						a:active {
+							text-decoration: none;
+						}
+						
 					}
 				}
 				.me {
@@ -180,4 +180,3 @@ header {
 		}
 	}
 }
-

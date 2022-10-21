@@ -154,6 +154,11 @@ h5 {
   width: min(100% - 1.25em, 43.75rem);
   margin-inline: auto;
 }
+@media (min-width: 64rem) {
+  .faq-section .container .faq {
+    width: min(100% - 1.25em, 33.75rem);
+  }
+}
 .faq-section .container .faq .question {
   position: relative;
   max-height: 3.75rem;
@@ -360,7 +365,7 @@ h5 {
   margin: 0;
 }
 .update .container form input[type=button]:hover {
-  outline: 0.125rem solid hsl(0deg, 94%, 66%);
+  outline: 0.09375rem solid hsl(0deg, 94%, 66%);
   color: hsl(0deg, 94%, 66%);
   background-color: transparent;
   transition: background-color 45ms ease-in;
@@ -421,9 +426,17 @@ header .container .links a:visited,
 header .container .links a:active {
   text-decoration: none;
 }
-header .container .links a .btn,
-header .container .links a:visited .btn,
-header .container .links a:active .btn {
+header .container .links li a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: hsla(229deg, 31%, 21%, 0.978);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+header .container .links li a:hover {
+  color: hsl(0deg, 94%, 66%);
+}
+header .container .links li .btn {
   background-color: hsl(0deg, 94%, 66%);
   color: #fff;
   padding: 0.9375em 2.5em;
@@ -439,23 +452,11 @@ header .container .links a:active .btn {
   border: none;
   display: block;
 }
-header .container .links a .btn:hover,
-header .container .links a:visited .btn:hover,
-header .container .links a:active .btn:hover {
-  outline: 0.125rem solid hsl(0deg, 94%, 66%);
+header .container .links li .btn:hover {
+  outline: 0.09375rem solid hsl(0deg, 94%, 66%);
   color: hsl(0deg, 94%, 66%);
   background-color: transparent;
   transition: background-color 45ms ease-in;
-}
-header .container .links li a {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: hsla(229deg, 31%, 21%, 0.978);
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-header .container .links li a:hover {
-  color: hsl(0deg, 94%, 66%);
 }
 header .container #hamburger img {
   width: 1.25rem;
@@ -538,14 +539,7 @@ header .container .mobile__navigation__body ul li a:hover {
 header .container .mobile__navigation__body ul li:nth-last-child(2) {
   border-bottom: 0.0625rem solid hsl(229deg, 8%, 60%);
 }
-header .container .mobile__navigation__body ul a {
-  text-decoration: none;
-}
-header .container .mobile__navigation__body ul a a:visited,
-header .container .mobile__navigation__body ul a a:active {
-  text-decoration: none;
-}
-header .container .mobile__navigation__body ul a .btn {
+header .container .mobile__navigation__body ul li .btn {
   margin-top: 1.875em;
   width: 100%;
   display: block;
@@ -560,9 +554,16 @@ header .container .mobile__navigation__body ul a .btn {
   letter-spacing: 0.125em;
   transition: background-color 0.3s ease;
 }
-header .container .mobile__navigation__body ul a .btn:hover {
+header .container .mobile__navigation__body ul li .btn:hover {
   background-color: #fff;
   color: hsla(229deg, 31%, 21%, 0.978);
+}
+header .container .mobile__navigation__body ul a {
+  text-decoration: none;
+}
+header .container .mobile__navigation__body ul a a:visited,
+header .container .mobile__navigation__body ul a a:active {
+  text-decoration: none;
 }
 header .container .mobile__navigation__body .me {
   width: 3.75rem;
