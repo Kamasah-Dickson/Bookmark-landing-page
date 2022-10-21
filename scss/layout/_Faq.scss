@@ -43,9 +43,10 @@
 					background-color: g.$Grayish-Blue;
 				}
 				.faq-question {
+					height: u.rem(50);
 					text-align: left;
 					@include u.flex;
-					margin-bottom: u.em(20);
+					margin-bottom: u.em(5);
 					.img {
 						width: u.rem(13);
 						height: u.rem(13);
@@ -55,7 +56,7 @@
 						background-position: center center;
 					}
 
-					h6 {
+					span {
 						font-size: clamp(u.rem(7), u.rem(8) + 2vw, u.rem(23));
 						margin-bottom: 0;
 						font-weight: 400;

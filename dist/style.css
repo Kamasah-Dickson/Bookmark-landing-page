@@ -189,11 +189,12 @@ h5 {
   background-color: hsl(229deg, 8%, 60%);
 }
 .faq-section .container .faq .question .faq-question {
+  height: 3.125rem;
   text-align: left;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.3125em;
 }
 .faq-section .container .faq .question .faq-question .img {
   width: 0.8125rem;
@@ -203,12 +204,12 @@ h5 {
   background-size: cover;
   background-position: center center;
 }
-.faq-section .container .faq .question .faq-question h6 {
+.faq-section .container .faq .question .faq-question span {
   font-size: clamp(0.4375rem, 0.5rem + 2vw, 1.4375rem);
   margin-bottom: 0;
   font-weight: 400;
 }
-.faq-section .container .faq .question .faq-question h6:hover {
+.faq-section .container .faq .question .faq-question span:hover {
   color: hsl(0deg, 94%, 66%);
 }
 .faq-section .container .faq .question p {
