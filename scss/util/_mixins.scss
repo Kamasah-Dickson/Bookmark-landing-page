@@ -16,15 +16,15 @@
 	border-radius: u.em(4);
 	cursor: pointer;
 	box-shadow: 0 u.rem(3) u.rem(5) u.rem(-1) g.$Soft-Blue2;
-	outline: 1px solid g.$Soft-Blue;
+	outline: u.rem(1) solid g.$Soft-Blue;
 	font-weight: 400;
 	margin-right: u.em(10);
-	border: 2px solid g.$Soft-Blue;
+	border: u.rem(2) solid g.$Soft-Blue;
 	&:hover {
 		background-color: transparent;
 		color: g.$Soft-Blue;
 		transition: background-color 0.3s ease-in, color 0.2s ease-in;
-		border: 2px solid g.$Soft-Blue;
+		border: u.rem(2) solid g.$Soft-Blue;
 	}
 }
 
@@ -62,9 +62,9 @@
 	font-weight: 400;
 	margin-left: u.em(5);
 	text-transform: uppercase;
-	border: 2px solid g.$Soft-Red;
+	border: u.rem(2) solid g.$Soft-Red;
 	&:hover {
-		outline: 2px solid g.$Soft-Red;
+		outline: u.rem(2) solid g.$Soft-Red;
 		color: g.$Soft-Red;
 		background-color: transparent;
 		transition: background-color 45ms ease-in;

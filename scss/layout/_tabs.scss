@@ -21,7 +21,7 @@
 				align-items: center;
 				grid-template-columns: 1fr;
 				margin-bottom: 4rem;
-				width: clamp(100% - 5px, 36px + 4vw, u.rem(550));
+				width: clamp(100% - u.rem(5), u.rem(36) + 4vw, u.rem(550));
 				margin-inline: auto;
 				@include u.breakpoints(small-m) {
 					grid-template-columns: 1fr 1fr 1fr;
@@ -122,6 +122,14 @@
 						button {
 							@include u.focused;
 							display: none;
+							@include u.breakpoints(small-m) {
+								display: block;
+								margin: u.rem(20) 0 0 0;
+								width: u.rem(130);
+								margin-top: u.em(20);
+								border-radius: u.rem(3);
+								padding: u.em(10) u.em(10);
+							}
 						}
 					}
 				}
@@ -130,7 +138,7 @@
 					grid-template-columns: 1fr;
 					@include u.breakpoints(small-m) {
 						display: grid;
-						grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+						grid-template-columns: repeat(auto-fit, minmax(u.rem(300), 1fr));
 						gap: u.rem(30);
 					}
 

@@ -16,7 +16,7 @@ html {
 
 body {
 	min-height: 100vh;
-	font-size: 18px;
+	font-size: u.rem(18);
 	position: relative;
 	.overflow-hidden {
 		position: relative;

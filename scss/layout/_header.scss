@@ -101,7 +101,7 @@ header {
 					margin: u.em(10) 0;
 					li {
 						padding: u.em(20) 0;
-						border-top: 1px solid g.$Grayish-Blue;
+						border-top: u.rem(1) solid g.$Grayish-Blue;
 						width: 100%;
 						text-align: center;
 						a {
@@ -117,7 +117,7 @@ header {
 							}
 						}
 						&:nth-last-child(2) {
-							border-bottom: 1px solid g.$Grayish-Blue;
+							border-bottom: u.rem(1) solid g.$Grayish-Blue;
 						}
 					}
 					a {
@@ -154,7 +154,7 @@ header {
 					border-radius: 100%;
 					transition: 100ms ease-in;
 					&:hover {
-						border: 2px solid g.$white;
+						border: u.rem(2) solid g.$white;
 						cursor: pointer;
 					}
 				}

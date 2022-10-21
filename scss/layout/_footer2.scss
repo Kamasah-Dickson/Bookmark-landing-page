@@ -3,7 +3,7 @@
 
 footer {
 	background-color: g.$Very-Dark-Blue;
-	padding-block: u.em(50);
+	padding: u.em(20) 0 u.em(10) 0;
 	.container {
 		@include u.flex;
 		flex-direction: column;
@@ -33,14 +33,42 @@ footer {
 				gap: u.rem(45);
 			}
 		}
+
+		@include u.breakpoints(small) {
+			flex-direction: row;
+			.left-container {
+				@include u.flex;
+				justify-content: center;
+				.logo {
+					margin-bottom: 0;
+					margin-right: u.em(50);
+				}
+				.nav {
+					flex-direction: row;
+					gap: u.rem(50);
+				}
+			}
+			.right-container {
+				.social {
+					margin-top: 0;
+					gap: u.rem(30);
+				}
+			}
+		}
 	}
 	.attribution {
-		font-size: clamp(u.rem(10), u.rem(7) + 2vw, u.rem(19));
+		font-size: clamp(u.rem(10), u.rem(7) + 2vw, u.rem(15));
 		margin-top: u.em(70);
 		color: g.$white;
+		text-align: center;
 		a {
-			color: g.$Soft-Red;
+			color: g.$Grayish-Blue;
 			text-transform: uppercase;
+		}
+		@include u.breakpoints(small) {
+			.attribution {
+				margin-top: u.em(15);
+			}
 		}
 	}
 }

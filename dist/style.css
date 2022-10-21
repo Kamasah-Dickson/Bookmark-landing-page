@@ -74,7 +74,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-size: 18px;
+  font-size: 1.125rem;
   position: relative;
 }
 body .overflow-hidden {
@@ -169,7 +169,7 @@ h5 {
 .faq-section .container .faq .question::before {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0rem;
   left: 0;
   width: 100%;
   height: 0.0625rem;
@@ -193,6 +193,7 @@ h5 {
 .faq-section .container .faq .question .faq-question h6 {
   font-size: clamp(0.4375rem, 0.5rem + 2vw, 1.4375rem);
   margin-bottom: 0;
+  font-weight: 400;
 }
 .faq-section .container .faq .question .faq-question h6:hover {
   color: hsl(0deg, 94%, 66%);
@@ -218,10 +219,10 @@ h5 {
   border-radius: 0.25em;
   cursor: pointer;
   box-shadow: 0 0.1875rem 0.3125rem -0.0625rem hsla(231deg, 69%, 60%, 0.048);
-  outline: 1px solid hsl(231deg, 69%, 60%);
+  outline: 0.0625rem solid hsl(231deg, 69%, 60%);
   font-weight: 400;
   margin-right: 0.625em;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
   display: block;
   width: 8.125rem;
   margin-inline: auto;
@@ -233,7 +234,7 @@ h5 {
   background-color: transparent;
   color: hsl(231deg, 69%, 60%);
   transition: background-color 0.3s ease-in, color 0.2s ease-in;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
 }
 
 .trans * {
@@ -244,6 +245,11 @@ h5 {
   background-color: hsl(231deg, 69%, 60%);
   padding: 3.125em 0 1.875em 0;
 }
+@media (min-width: 48rem) {
+  .update {
+    padding: 4.375em 0 3.125em 0;
+  }
+}
 .update .container .update-header {
   text-align: center;
   margin-bottom: 4.375em;
@@ -252,11 +258,25 @@ h5 {
 .update .container .update-header p {
   color: #fff;
   letter-spacing: 0.21875em;
+  text-transform: uppercase;
 }
 .update .container .update-header h6 {
   font-weight: 400;
   margin-top: 0.625em;
   margin-bottom: 0;
+}
+@media (min-width: 48rem) {
+  .update .container .update-header {
+    max-width: 28.125rem;
+    margin-inline: auto;
+  }
+  .update .container .update-header p {
+    font-size: 0.8125rem;
+  }
+  .update .container .update-header h6 {
+    font-size: 2.1875rem;
+    margin-top: 0.5em;
+  }
 }
 .update .container form {
   display: flex;
@@ -333,14 +353,14 @@ h5 {
   font-weight: 400;
   margin-left: 0.3125em;
   text-transform: uppercase;
-  border: 2px solid hsl(0deg, 94%, 66%);
+  border: 0.125rem solid hsl(0deg, 94%, 66%);
   text-transform: capitalize;
   box-shadow: none;
   font-size: 1rem;
   margin: 0;
 }
 .update .container form input[type=button]:hover {
-  outline: 2px solid hsl(0deg, 94%, 66%);
+  outline: 0.125rem solid hsl(0deg, 94%, 66%);
   color: hsl(0deg, 94%, 66%);
   background-color: transparent;
   transition: background-color 45ms ease-in;
@@ -364,7 +384,7 @@ h5 {
   }
   .update .container form input[type=button] {
     padding-inline: 1.25rem;
-    width: 150px;
+    width: 9.375rem;
   }
 }
 
@@ -414,7 +434,7 @@ header .container .links a:active .btn {
   font-weight: 400;
   margin-left: 0.3125em;
   text-transform: uppercase;
-  border: 2px solid hsl(0deg, 94%, 66%);
+  border: 0.125rem solid hsl(0deg, 94%, 66%);
   box-shadow: none;
   border: none;
   display: block;
@@ -422,7 +442,7 @@ header .container .links a:active .btn {
 header .container .links a .btn:hover,
 header .container .links a:visited .btn:hover,
 header .container .links a:active .btn:hover {
-  outline: 2px solid hsl(0deg, 94%, 66%);
+  outline: 0.125rem solid hsl(0deg, 94%, 66%);
   color: hsl(0deg, 94%, 66%);
   background-color: transparent;
   transition: background-color 45ms ease-in;
@@ -499,7 +519,7 @@ header .container .mobile__navigation__body ul {
 }
 header .container .mobile__navigation__body ul li {
   padding: 1.25em 0;
-  border-top: 1px solid hsl(229deg, 8%, 60%);
+  border-top: 0.0625rem solid hsl(229deg, 8%, 60%);
   width: 100%;
   text-align: center;
 }
@@ -516,7 +536,7 @@ header .container .mobile__navigation__body ul li a:hover {
   color: hsl(229deg, 8%, 60%);
 }
 header .container .mobile__navigation__body ul li:nth-last-child(2) {
-  border-bottom: 1px solid hsl(229deg, 8%, 60%);
+  border-bottom: 0.0625rem solid hsl(229deg, 8%, 60%);
 }
 header .container .mobile__navigation__body ul a {
   text-decoration: none;
@@ -552,7 +572,7 @@ header .container .mobile__navigation__body .me {
   transition: 100ms ease-in;
 }
 header .container .mobile__navigation__body .me:hover {
-  border: 2px solid #fff;
+  border: 0.125rem solid #fff;
   cursor: pointer;
 }
 header .container .mobile__navigation__footer {
@@ -611,16 +631,16 @@ main .hero-section .container .left-container .hero-buttons .focused {
   border-radius: 0.25em;
   cursor: pointer;
   box-shadow: 0 0.1875rem 0.3125rem -0.0625rem hsla(231deg, 69%, 60%, 0.048);
-  outline: 1px solid hsl(231deg, 69%, 60%);
+  outline: 0.0625rem solid hsl(231deg, 69%, 60%);
   font-weight: 400;
   margin-right: 0.625em;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
 }
 main .hero-section .container .left-container .hero-buttons .focused:hover {
   background-color: transparent;
   color: hsl(231deg, 69%, 60%);
   transition: background-color 0.3s ease-in, color 0.2s ease-in;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
 }
 main .hero-section .container .left-container .hero-buttons .normal {
   color: hsla(229deg, 31%, 21%, 0.978);
@@ -656,6 +676,7 @@ main .hero-section .container .right-container::before {
   height: clamp(10rem, 50vw, 23.125rem);
   background-color: hsl(231deg, 69%, 60%);
   border-bottom-left-radius: 5rem;
+  box-shadow: 0 0 0.125rem 0.125rem hsl(231deg, 69%, 60%);
 }
 @media (min-width: 56.25rem) {
   main .hero-section .container {
@@ -701,18 +722,18 @@ main .hero-section .container .left-container p {
     gap: 0em;
   }
   .download .download-body .container .grid-container .box {
-    width: min(100% - 0.625rem, 18.75rem);
+    width: min(100% - 0.625rem, 15.625rem);
   }
   .download .download-body .container .grid-container .box2 {
     transform: translateY(1.875rem);
   }
   .download .download-body .container .grid-container .box3 {
-    transform: translateY(3.125rem);
+    transform: translateY(3.75rem);
   }
 }
 .download .download-body .container .grid-container .box {
-  box-shadow: 0.0625rem 0.25rem 0.3125rem 0.1875rem rgba(0, 0, 0, 0.096);
-  border-radius: 0.625rem;
+  box-shadow: 0.0625rem 0.3125rem 0.3125rem 0.1875rem rgba(45, 45, 49, 0.096);
+  border-radius: 0.9375rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -748,14 +769,14 @@ main .hero-section .container .left-container p {
   border-radius: 0.25em;
   cursor: pointer;
   box-shadow: 0 0.1875rem 0.3125rem -0.0625rem hsla(231deg, 69%, 60%, 0.048);
-  outline: 1px solid hsl(231deg, 69%, 60%);
+  outline: 0.0625rem solid hsl(231deg, 69%, 60%);
   font-weight: 400;
   margin-right: 0.625em;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
   display: block;
   padding-inline: 0.625em;
   padding-block: 0.875rem;
-  font-size: clamp(0.8125rem, 0.625rem + 1vw, 1.0625rem);
+  font-size: clamp(0.8125rem, 0.4375rem + 1vw, 0.9375rem);
   width: 80%;
   margin-inline: auto;
 }
@@ -763,7 +784,7 @@ main .hero-section .container .left-container p {
   background-color: transparent;
   color: hsl(231deg, 69%, 60%);
   transition: background-color 0.3s ease-in, color 0.2s ease-in;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
 }
 
 .feature {
@@ -790,7 +811,7 @@ main .hero-section .container .left-container p {
   align-items: center;
   grid-template-columns: 1fr;
   margin-bottom: 4rem;
-  width: clamp(100% - 5px, 36px + 4vw, 34.375rem);
+  width: clamp(100% - 0.3125rem, 2.25rem + 4vw, 34.375rem);
   margin-inline: auto;
 }
 @media (min-width: 43.75rem) {
@@ -905,17 +926,27 @@ main .hero-section .container .left-container p {
   border-radius: 0.25em;
   cursor: pointer;
   box-shadow: 0 0.1875rem 0.3125rem -0.0625rem hsla(231deg, 69%, 60%, 0.048);
-  outline: 1px solid hsl(231deg, 69%, 60%);
+  outline: 0.0625rem solid hsl(231deg, 69%, 60%);
   font-weight: 400;
   margin-right: 0.625em;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
   display: none;
 }
 .feature .container .tabs-section .tab-body .tab-container .right-container button:hover {
   background-color: transparent;
   color: hsl(231deg, 69%, 60%);
   transition: background-color 0.3s ease-in, color 0.2s ease-in;
-  border: 2px solid hsl(231deg, 69%, 60%);
+  border: 0.125rem solid hsl(231deg, 69%, 60%);
+}
+@media (min-width: 43.75rem) {
+  .feature .container .tabs-section .tab-body .tab-container .right-container button {
+    display: block;
+    margin: 1.25rem 0 0 0;
+    width: 8.125rem;
+    margin-top: 1.25em;
+    border-radius: 0.1875rem;
+    padding: 0.625em 0.625em;
+  }
 }
 .feature .container .tabs-section .tab-body .active {
   display: grid;
@@ -924,7 +955,7 @@ main .hero-section .container .left-container p {
 @media (min-width: 43.75rem) {
   .feature .container .tabs-section .tab-body .active {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 1.875rem;
   }
 }
@@ -964,7 +995,7 @@ main .hero-section .container .left-container p {
 
 footer {
   background-color: hsla(229deg, 31%, 21%, 0.978);
-  padding-block: 3.125em;
+  padding: 1.25em 0 0.625em 0;
 }
 footer .container {
   display: flex;
@@ -1000,12 +1031,41 @@ footer .container .right-container .social {
   justify-content: space-between;
   gap: 2.8125rem;
 }
+@media (min-width: 48rem) {
+  footer .container {
+    flex-direction: row;
+  }
+  footer .container .left-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+  }
+  footer .container .left-container .logo {
+    margin-bottom: 0;
+    margin-right: 3.125em;
+  }
+  footer .container .left-container .nav {
+    flex-direction: row;
+    gap: 3.125rem;
+  }
+  footer .container .right-container .social {
+    margin-top: 0;
+    gap: 1.875rem;
+  }
+}
 footer .attribution {
-  font-size: clamp(0.625rem, 0.4375rem + 2vw, 1.1875rem);
+  font-size: clamp(0.625rem, 0.4375rem + 2vw, 0.9375rem);
   margin-top: 4.375em;
   color: #fff;
+  text-align: center;
 }
 footer .attribution a {
-  color: hsl(0deg, 94%, 66%);
+  color: hsl(229deg, 8%, 60%);
   text-transform: uppercase;
+}
+@media (min-width: 48rem) {
+  footer .attribution .attribution {
+    margin-top: 0.9375em;
+  }
 }/*# sourceMappingURL=style.css.map */
